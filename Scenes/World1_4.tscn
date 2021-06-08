@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://World/Scenes/TileMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Scenes/Objective.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Scenes/PlayerStartingPosition.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Scenes/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/Scenes/BlackBackground - CanvasLayer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/Scenes/SawWheel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/Scripts/World1_4.gd" type="Script" id=7]
+
+[node name="World1_4" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 68.1806, -187.01 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+limit_left = 0
+limit_top = -1000
+limit_right = 2750
+limit_bottom = 750
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="PlayerStartingPosition" parent="." instance=ExtResource( 3 )]
+position = Vector2( 68.1806, -185.062 )
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( -1114113, 8, 0, -1048577, 8, 0, -983041, 8, 0, -917505, 8, 0, -982995, 4, 0, -851969, 8, 0, -917459, 4, 0, -786433, 8, 0, -851923, 4, 0, -720897, 8, 0, -786387, 4, 0, -655361, 8, 0, -720851, 4, 0, -589825, 8, 0, -655315, 4, 0, -524289, 8, 0, -589779, 4, 0, -458753, 8, 0, -524243, 4, 0, -524225, 4, 0, -393217, 8, 0, -458689, 4, 0, -327681, 8, 0, -393153, 4, 0, -262145, 8, 0, -327617, 4, 0, -327616, 4, 0, -327615, 4, 0, -327614, 4, 0, -327613, 4, 0, -327612, 4, 0, -327611, 4, 0, -327610, 4, 0, -327609, 4, 0, -327608, 4, 0, -327607, 4, 0, -327606, 4, 0, -327605, 4, 0, -327604, 4, 0, -327603, 4, 0, -327602, 4, 0, -327601, 4, 0, -327600, 4, 0, -327599, 4, 0, -327598, 4, 0, -327597, 4, 0, -327596, 4, 0, -327595, 4, 0, -196609, 8, 0, -262144, 0, 0, -262143, 0, 0, -262142, 0, 0, -262141, 0, 0, -262140, 4, 0, -262139, 4, 0, -262138, 4, 0, -262137, 4, 0, -262136, 4, 0, -262135, 4, 0, -262134, 4, 0, -262133, 4, 0, -262132, 4, 0, -262131, 4, 0, -262130, 4, 0, -262081, 4, 0, -196545, 4, 0, -131050, 4, 0, -131009, 4, 0, -65514, 4, 0, -65491, 4, 0, -65473, 4, 0, 22, 4, 0, 45, 4, 0, 65548, 4, 0, 65558, 4, 0, 65581, 4, 0, 131084, 4, 0, 131094, 4, 0, 131117, 4, 0, 196620, 4, 0, 196630, 4, 0, 196653, 4, 0, 262156, 4, 0, 262166, 4, 0, 262189, 4, 0, 327692, 4, 0, 327702, 4, 0, 327725, 4, 0, 393228, 4, 0, 393261, 4, 0, 393279, 4, 0, 458764, 4, 0, 458797, 4, 0, 458815, 4, 0, 524300, 4, 0, 524333, 4, 0, 524351, 4, 0, 589836, 4, 0, 589887, 4, 0, 655372, 4, 0, 655423, 4, 0, 720908, 4, 0, 720959, 4, 0, 786444, 4, 0, 786495, 4, 0, 851980, 4, 0, 852031, 4, 0, 917516, 4, 0, 917567, 4, 0, 1114150, 4, 0, 1114151, 4, 0, 1114152, 4, 0, 1114153, 4, 0, 1114154, 4, 0, 1114155, 4, 0, 1114156, 4, 0, 1114157, 4, 0, 1114158, 4, 0, 1114159, 4, 0, 1114160, 4, 0, 1114161, 4, 0, 1114162, 4, 0, 1114163, 4, 0 )
+
+[node name="Objective" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2703.95, -176.522 )
+scale = Vector2( 2, 2 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 5 )]
+
+[node name="Saws" type="Node" parent="."]
+
+[node name="SawWheel" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 718.819, -140.257 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel2" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 397.396, -37.0124 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel3" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 449.992, 543.497 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel4" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 631.158, 576.613 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel5" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 822.064, 590.249 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel6" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 997.385, 594.145 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel7" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 1151.28, 596.093 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel8" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 1784.38, 580.509 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel9" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 1973.34, 541.549 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel10" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 1457.12, 338.955 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel11" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 2033.73, 140.257 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel12" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 2033.73, 46.7523 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel13" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 1459.06, -79.8689 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel14" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 1459.06, -175.322 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel15" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 1453.22, -537.653 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel19" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 2107.75, -212.334 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel20" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 2107.75, -306.659 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel16" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 1320.76, 163.633 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel17" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 1137.64, 50.6484 )
+scale = Vector2( 3, 3 )
+
+[node name="SawWheel18" parent="Saws" instance=ExtResource( 6 )]
+position = Vector2( 940.891, -64.2847 )
+scale = Vector2( 3, 3 )
+[connection signal="PlayerOutOfBounds" from="." to="Player" method="_on_World_PlayerOutOfBounds"]
+[connection signal="PlayerDed" from="Player" to="." method="_on_Player_PlayerDed"]
+[connection signal="Player_On_Objective" from="Player" to="." method="_on_Player_Player_On_Objective"]

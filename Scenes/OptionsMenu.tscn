@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://World/Scripts/OptionsMenu.gd" type="Script" id=1]
+
+[node name="OptionsMenu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MasterVolumeSlider" type="HSlider" parent="Control"]
+margin_left = 151.789
+margin_top = 108.83
+margin_right = 167.789
+margin_bottom = 124.83
+rect_min_size = Vector2( 150, 0 )
+min_value = -40.0
+max_value = 15.0
+value = -5.0
+rounded = true
+tick_count = 10
+ticks_on_borders = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 44.2225
+margin_top = 110.105
+margin_right = 141.223
+margin_bottom = 124.105
+text = "Master Volume"
+
+[node name="BackButton" type="Button" parent="Control"]
+margin_left = 42.4175
+margin_top = 176.89
+margin_right = 106.418
+margin_bottom = 196.89
+text = "Go Back"
+[connection signal="value_changed" from="Control/MasterVolumeSlider" to="." method="_on_MasterVolumeSlider_value_changed"]
+[connection signal="pressed" from="Control/BackButton" to="." method="_on_BackButton_pressed"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://World/Scenes/SawWheel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Scripts/MovingSaw.gd" type="Script" id=2]
+
+[node name="MovingSaw" type="Node2D"]
+position = Vector2( 16.29, 25.721 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+isVertical = true
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 0, 150 )
+
+[node name="Position2D2" type="Position2D" parent="."]
+
+[node name="SawWheel" parent="." instance=ExtResource( 1 )]
